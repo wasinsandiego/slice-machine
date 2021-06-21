@@ -49,7 +49,7 @@ const ModalCard = ({
         close()
       }}
     >
-      {({ isValid, isSubmitting, values, errors, touched }) => (
+      {({ isValid, isSubmitting, values, errors, touched, resetForm, setFieldValue }) => (
         <Form id={formId}>
           <Card
             borderFooter
@@ -94,7 +94,7 @@ const ModalCard = ({
               </Flex>
             )}
           >
-            { children({ isValid, isSubmitting, values, errors, touched }) }
+            { children({ isValid, isSubmitting, values, errors, touched, resetForm, setFieldValue }) }
           </Card>
         </Form>
       )}
